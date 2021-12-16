@@ -42,7 +42,6 @@ public:
     ADT Union(ADT& array);
     ADT intersection(ADT& array);
 
-
 };
 
 ADT ADT::intersection(ADT& array)
@@ -273,7 +272,17 @@ bool ADT::selection_sort()
     {
         for (size_t i = 0; i < this->length - 1; ++i)
         {
-            this->swap(i,this->min_i());
+            int min = ptr[i];
+            size_t min_pos {i}, j;
+            for(j = i+1; j < this->length; ++j)
+            {
+                if (min > ptr[j])
+                {
+                    min = ptr[j];
+                    min_pos = j;
+                }  
+            }
+            this->swap(i,j);
         }
         return true;
     }else
