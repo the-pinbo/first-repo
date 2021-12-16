@@ -11,20 +11,20 @@ public:
   }
 };
 
-class MyStack
+class MyQueue
 {
 public:
   vector<int> v;
   size_t size;
   Node *head;
   Node *tail;
-  MyStack()
+  MyQueue()
   {
     size = 0;
     head = nullptr;
     tail = nullptr;
   }
-  ~MyStack()
+  ~MyQueue()
   {
     size = 0;
     head = nullptr;

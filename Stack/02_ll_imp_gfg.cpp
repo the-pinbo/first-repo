@@ -11,12 +11,12 @@ public:
   }
 };
 
-class MyStack
+class MyQueue
 {
 public:
   size_t size;
   Node *head;
-  MyStack()
+  MyQueue()
   {
     size = 0;
     head = nullptr;
@@ -62,7 +62,7 @@ public:
 // Driver Code
 int main()
 {
-  MyStack st;
+  MyQueue st;
   cout << "The size of the stack is: " << st.size << endl;
   st.push(10);
   cout << "The size of the stack is: " << st.size << endl;

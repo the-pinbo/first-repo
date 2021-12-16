@@ -1,7 +1,7 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-class MyStack
+class MyQueue
 {
 public:
   vector<int> v;
