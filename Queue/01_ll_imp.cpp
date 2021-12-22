@@ -36,34 +36,75 @@ public:
   }
   void dequeue()
   {
-    if (isEmpty())
-      ;
-    else if (this->size == 1)
+    if (this->size == 0)
+    {
+      return;
+    };
+    if (this->size == 1)
     {
       delete front;
       front = rear = nullptr;
     }
     else
     {
-
       Node *temp = front;
       front = front->next;
       delete temp;
     }
-    size--;
+    this->size--;
     return;
   }
   int get_front()
   {
-    return front->data;
+    return this->size ? front->data : 0;
   }
   int get_rear()
   {
-    return rear->data;
+    return this->size ? rear->data : 0;
   }
 
   bool isEmpty()
   {
-    return bool(this->size);
+    return (this->size == 0);
   }
 };
+
+int main()
+{
+  MyQueue q;
+  cout << "The size of the queue is: " << q.size << endl;
+  q.enqueue(10);
+  cout << "The size of the queue is: " << q.size << endl;
+  cout << "The front of the queue is: " << q.get_front() << endl;
+  cout << "The rear of the queue is: " << q.get_rear() << endl;
+  q.enqueue(20);
+  cout << "The size of the queue is: " << q.size << endl;
+  cout << "The front of the queue is: " << q.get_front() << endl;
+  cout << "The rear of the queue is: " << q.get_rear() << endl;
+  q.enqueue(30);
+  q.dequeue();
+  cout << "The size of the queue is: " << q.size << endl;
+  cout << "The front of the queue is: " << q.get_front() << endl;
+  cout << "The rear of the queue is: " << q.get_rear() << endl;
+  q.dequeue();
+  cout << "The size of the queue is: " << q.size << endl;
+  cout << "The front of the queue is: " << q.get_front() << endl;
+  cout << "The rear of the queue is: " << q.get_rear() << endl;
+  q.dequeue();
+  cout << "The size of the queue is: " << q.size << endl;
+  cout << "The front of the queue is: " << q.get_front() << endl;
+  cout << "The rear of the queue is: " << q.get_rear() << endl;
+  q.dequeue();
+  cout << "The size of the queue is: " << q.size << endl;
+  cout << "The front of the queue is: " << q.get_front() << endl;
+  cout << "The rear of the queue is: " << q.get_rear() << endl;
+  q.enqueue(100);
+  cout << "The size of the queue is: " << q.size << endl;
+  cout << "The front of the queue is: " << q.get_front() << endl;
+  cout << "The rear of the queue is: " << q.get_rear() << endl;
+  q.dequeue();
+  cout << "The size of the queue is: " << q.size << endl;
+  cout << "The front of the queue is: " << q.get_front() << endl;
+  cout << "The rear of the queue is: " << q.get_rear() << endl;
+  return 0;
+}
