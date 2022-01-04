@@ -33,6 +33,8 @@
 		"valarray": "cpp",
 		"vector": "cpp",
 		"xhash": "cpp",
-		"xiosbase": "cpp"
+		"xiosbase": "cpp",
+		"random": "cpp",
+		"xutility": "cpp"
 	}
 }
