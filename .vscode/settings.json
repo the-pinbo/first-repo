@@ -35,6 +35,13 @@
 		"xhash": "cpp",
 		"xiosbase": "cpp",
 		"random": "cpp",
-		"xutility": "cpp"
-	}
+		"xutility": "cpp",
+		"chrono": "cpp",
+		"type_traits": "cpp",
+		"xlocmes": "cpp",
+		"xlocmon": "cpp",
+		"xlocnum": "cpp",
+		"xloctime": "cpp"
+	},
+	"cSpell.words": ["hoare", "lomuto"]
 }
